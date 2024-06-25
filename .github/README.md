@@ -1,3 +1,6 @@
+## This repo is a fork of [elythh/nixvim](https://github.com/elythh/nixvim) for my opionated setup. 
+Please go to the original repository for fully maintained nixvim setup with awesome work of @elythh
+
 <div align="center">
     <img src="assets/neovim-flake-logo-work.svg" alt="neovim-flake Logo"  width="200">
 </div>
