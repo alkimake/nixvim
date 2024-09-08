@@ -17,23 +17,22 @@
     };
   };
 
-  outputs =
-    { nixpkgs
-    , nixvim
-    , nix-formatter-pack
-    , ...
-    }:
-    let
-      forAllSystems = nixpkgs.lib.genAttrs [
-        "aarch64-linux"
-        "i686-linux"
-        "x86_64-linux"
-        "aarch64-darwin"
-        "x86_64-darwin"
-      ];
-    in
-    {
-      formatter = forAllSystems (system:
+  outputs = {
+    nixpkgs,
+    nixvim,
+    nix-formatter-pack,
+    ...
+  }: let
+    forAllSystems = nixpkgs.lib.genAttrs [
+      "aarch64-linux"
+      "i686-linux"
+      "x86_64-linux"
+      "aarch64-darwin"
+      "x86_64-darwin"
+    ];
+  in {
+    formatter = forAllSystems (
+      system:
         nix-formatter-pack.lib.mkFormatter {
           pkgs = nixpkgs.legacyPackages.${system};
 
@@ -43,28 +42,29 @@
             statix.enable = true;
           };
         }
-      );
+    );
 
-      packages = forAllSystems (system:
-        let
-          pkgs = import nixpkgs { inherit system; };
-          mkNixvim = specialArgs:
-            nixvim.legacyPackages.${system}.makeNixvimWithModule {
-              inherit pkgs;
+    packages = forAllSystems (
+      system: let
+        pkgs = import nixpkgs {inherit system;};
+        mkNixvim = specialArgs:
+          nixvim.legacyPackages.${system}.makeNixvimWithModule {
+            inherit pkgs;
 
-              module = ./.;
+            module = ./.;
 
-              extraSpecialArgs = specialArgs // {
+            extraSpecialArgs =
+              specialArgs
+              // {
                 inherit pkgs;
 
                 icons = import ./utils/_icons.nix;
               };
-            };
-        in
-        {
-          default = mkNixvim { };
-          lite = mkNixvim { withLSP = false; };
-        }
-      );
-    };
+          };
+      in {
+        default = mkNixvim {};
+        lite = mkNixvim {withLSP = false;};
+      }
+    );
+  };
 }
