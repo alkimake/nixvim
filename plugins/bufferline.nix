@@ -7,6 +7,7 @@ _: {
       };
     };
   };
+  rootOpts = {
   keymaps = [
     {
       mode = "n";
@@ -116,7 +117,6 @@ _: {
       };
     }
   ];
-  rootOpts = {
     # Enable catppuccin colors
     # https://github.com/catppuccin/nvim/blob/main/lua/catppuccin/groups/integrations/bufferline.lua
     colorschemes.catppuccin.settings.integrations.bufferline = true;
