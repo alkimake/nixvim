@@ -12,6 +12,7 @@
         "TelescopePrompt"
         "neo-tree"
         "neo-tree-popup"
+        "lazygit"
       ];
 
       # Customize section names (prefixed mappings)
