@@ -13,6 +13,7 @@
         "neo-tree"
         "neo-tree-popup"
         "lazygit"
+        "toggleterm"
       ];
 
       # Customize section names (prefixed mappings)
