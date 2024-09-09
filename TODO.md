@@ -16,3 +16,4 @@
 [UFO](https://github.com/kevinhwang91/nvim-ufo)
 [trouble](https://github.com/folke/trouble.nvim)
 [LSPSaga](https://nvimdev.github.io/lspsaga/)
+[Octo](https://github.com/pwntester/octo.nvim)
