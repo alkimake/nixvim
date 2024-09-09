@@ -2,7 +2,7 @@ _: {
   opts = {
     enable = true;
     delay = 200;
-    filetypesDenylist = ["dirbuf" "dirvish" "fugitive" "toggleterm"];
+    filetypesDenylist = ["dirbuf" "dirvish" "fugitive" "toggleterm" "lazygit" "TelescopePrompt"];
     largeFileOverrides.providers = ["lsp"];
     minCountToHighlight = 2;
 
