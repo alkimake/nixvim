@@ -1,7 +1,7 @@
 _: {
   opts = {
     enable = true;
-    enableLspFormat = true;
+    enableLspFormat = false;
     settings = {
       updateInInsert = false;
     };
