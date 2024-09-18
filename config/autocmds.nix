@@ -16,6 +16,21 @@
   };
 
   autoCmd = [
+    # autoformat on save
+
+    {
+      desc = "Disable auto format on save by default";
+      event = "BufWritePre";
+      group = "autoview";
+
+      callback.__raw = ''
+        function()
+          vim.b.autoformat = false
+        end
+      '';
+    }
+
+
     # auto_quit
     {
       desc = "Quit neovim if more than one window is open and only sidebar windows are list";
