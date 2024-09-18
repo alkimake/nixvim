@@ -99,7 +99,7 @@
       nixd.enable = true;
       pyright.enable = true;
       terraformls.enable = true;
-      tsserver.enable = true;
+      ts-ls.enable = true;
       yamlls.enable = true;
 
       typos-lsp = {
