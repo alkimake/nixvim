@@ -1,5 +1,6 @@
 # TODO
 
+- [ ] LSP autoformat toggle is not working
 - [ ] Grouping the plugins under subdirectories
   - [ ] lsp
   - [ ] git

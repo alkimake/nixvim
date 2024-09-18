@@ -4,5 +4,6 @@
     ++ (import ./splits.nix)
     ++ (import ./standard.nix)
     ++ (import ./tabs.nix)
-    ++ (import ./terminal.nix);
+    ++ (import ./terminal.nix)
+    ++ (import ./ui.nix);
 }
