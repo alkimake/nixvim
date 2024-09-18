@@ -49,6 +49,10 @@
           action = "type_definition";
           desc = "Go to type definition";
         };
+        "<leader>cr" = {
+          action = "rename";
+          desc = "Rename";
+        };
 
         K = {
           action = "hover";
