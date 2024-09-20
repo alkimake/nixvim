@@ -1,5 +1,6 @@
 # TODO
 
+- [ ] Obsidian paths can be parametered
 - [ ] LSP autoformat toggle is not working
 - [ ] Grouping the plugins under subdirectories
   - [ ] lsp
