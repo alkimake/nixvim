@@ -16,7 +16,7 @@ _:
       ];
       daily_notes = {
         template = "~/Documents/obsidian/templates/daily_note_template.md";
-        folder = "~/Documents/obsidian/ake-work/daily_notes";
+        folder = "daily_notes";
       };
       mappings = {
         gf = {
