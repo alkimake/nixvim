@@ -15,7 +15,7 @@
     cmdheight = 0;
 
     # Set conceal level for concealing the fonts for obsidian
-    conceallevel = 1;
+    conceallevel = 2;
 
     # Insert mode completion options
     completeopt = ["menu" "menuone" "noselect"];
