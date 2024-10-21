@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - setup-github-workflow
   pull_request:
     branches:
       - main
