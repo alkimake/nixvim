@@ -61,3 +61,98 @@ Each plugin file must export a lambda, which is called with an attribute set con
 - `extra`: custom plugin not supported by Nixvim
   - `extra.packages`: list of packages to be added as `extraPlugins` (ie. `vimPlugins.<plugin>`)
   - `extra.config`: plugin configuration in lua
+
+## Defining the Vault Address
+
+You can define the vault address from outside the `nixvim` configuration by using a parameter or overlay. This allows you to customize the vault address without modifying the core configuration files.
+
+### Using a Parameter
+
+To define the vault address using a parameter, you can pass the `vaultAddress` parameter when importing the `nixvim` module. Here's an example:
+
+```nix
+{
+  inputs.nixvim-config.url = "github:alkimake/nixvim-config";
+
+  outputs = { nixvim-config, ... }: {
+    overlays.additions = final: _prev: {
+      nixvim = nixvim-config.packages.${_prev.system}.default {
+        vaultAddress = "/path/to/your/vault";
+      };
+
+      # Or use the lite version
+      # nixvim = nixvim-config.packages.${_prev.system}.lite {
+      #   vaultAddress = "/path/to/your/vault";
+      # };
+    }
+  }
+}
+```
+
+### Using an Overlay
+
+You can also define the vault address using an overlay. This approach allows you to override the default vault address without modifying the core configuration files. Here's an example:
+
+```nix
+{
+  inputs.nixvim-config.url = "github:alkimake/nixvim-config";
+
+  outputs = { nixvim-config, ... }: {
+    overlays.additions = final: _prev: {
+      nixvim = final.lib.mkMerge [
+        nixvim-config.packages.${_prev.system}.default
+        {
+          config = {
+            vaultAddress = "/path/to/your/vault";
+          };
+        }
+      ];
+
+      # Or use the lite version
+      # nixvim = final.lib.mkMerge [
+      #   nixvim-config.packages.${_prev.system}.lite
+      #   {
+      #     config = {
+      #       vaultAddress = "/path/to/your/vault";
+      #     };
+      #   }
+      # ];
+    }
+  }
+}
+```
+
+### Defining Workspaces
+
+You can define workspaces in the `nixvim` configuration by specifying the `workspaces` setting within the Obsidian plugin configuration. Here's an example:
+
+```nix
+{
+  inputs.nixvim-config.url = "github:alkimake/nixvim-config";
+
+  outputs = { nixvim-config, ... }: {
+    overlays.additions = final: _prev: {
+      nixvim = nixvim-config.packages.${_prev.system}.default {
+        vaultAddress = "/path/to/your/vault";
+        workspaces = [
+          {
+            name = "work";
+            path = "/path/to/your/vault/work";
+          }
+        ];
+      };
+
+      # Or use the lite version
+      # nixvim = nixvim-config.packages.${_prev.system}.lite {
+      #   vaultAddress = "/path/to/your/vault";
+      #   workspaces = [
+      #     {
+      #       name = "work";
+      #       path = "/path/to/your/vault/work";
+      #     }
+      #   ];
+      # };
+    }
+  }
+}
+```
