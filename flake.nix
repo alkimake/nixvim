@@ -15,12 +15,18 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    github-actions = {
+      url = "github:nix-community/nixpkgs-github-actions";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     nixpkgs,
     nixvim,
     nix-formatter-pack,
+    github-actions,
     ...
   }: let
     forAllSystems = nixpkgs.lib.genAttrs [
