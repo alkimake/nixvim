@@ -3,7 +3,7 @@
 _: {
   opts = {
     enable = true;
-    settings.auto_close = false;
+    settings.auto_close = 0;
   };
 
   rootOpts.keymaps = [
