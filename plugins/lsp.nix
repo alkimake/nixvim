@@ -101,6 +101,11 @@
       terraformls.enable = true;
       ts_ls.enable = true;
       yamlls.enable = true;
+      rust_analyzer = {
+        enable = true;
+        installCargo = false;
+        installRustc = false;
+      };
 
       typos_lsp = {
         enable = true;
