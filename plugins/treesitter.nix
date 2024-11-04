@@ -9,6 +9,10 @@
       indent = {
         enable = true;
       };
+      ensure_installed = [
+        "hcl"
+        "terraform"
+      ];
 
       # Workaround to enable incremental selection without setting default keymaps (keymaps are set globally)
       # This is needed in order to set custom descriptions and avoid to have multiple keymaps
@@ -21,6 +25,7 @@
   };
 
   rootOpts = {
+    filetype.extension.tf = "terraform";
     # Enable catppuccin colors
     # https://github.com/catppuccin/nvim/blob/main/lua/catppuccin/groups/integrations/treesitter.lua
     colorschemes.catppuccin.settings.integrations.treesitter = true;
