@@ -1,8 +1,7 @@
-_:
-{
+_: {
   opts = {
     enable = true;
-    settings = { vaultAddress ? "~/Documents/obsidian/ake-work";
+    settings = {
       completion = {
         min_chars = 2;
         nvim_cmp = true;
@@ -11,7 +10,7 @@ _:
       workspaces = [
         {
           name = "work";
-          path = vaultAddress;
+          path = "~/Documents/obsidian/vault";
         }
       ];
       daily_notes = {
