@@ -32,7 +32,7 @@ _: {
           theirs = "ct";
         };
       };
-      provider = "claude";
+      provider = "copilot";
       windows = {
         sidebar_header = {
           align = "center";

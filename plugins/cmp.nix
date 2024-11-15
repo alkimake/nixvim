@@ -23,6 +23,7 @@ _: {
           name = "path"; # file system paths
           keywordLength = 3;
         }
+        {name = "copilot";}
       ];
 
       window = {
@@ -72,6 +73,7 @@ _: {
               Event = "",
               Operator = "",
               TypeParameter = "",
+              Copilot = "",
             } 
 
              local cmp = require'cmp'
