@@ -138,6 +138,16 @@
           key = "gr";
           fn = "lsp_references";
         }
+        {
+          desc = "Search Symbols";
+          key = "<leader>fs";
+          fn = "lsp_document_symbols";
+        }
+        {
+          desc = "Search Symbols (Workspace)";
+          key = "<leader>fS";
+          fn = "lsp_workspace_symbols";
+        }
       ];
   };
 }
