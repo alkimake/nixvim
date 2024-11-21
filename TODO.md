@@ -10,6 +10,7 @@
 - [ ] fix autopairs toggle behaviour
 - [ ] indent blankline highlight settings
 - [ ] setup proper bufferline
+- [x] Copilot and Avante settings are in place
 
 ## Plugins to Check
 
