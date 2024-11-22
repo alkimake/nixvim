@@ -2,7 +2,7 @@ _: {
   opts = {
     enable = true;
     settings = {
-      filetypes = [ "markdown" "Avante" "AvanteInput" ];
+      file_types = ["markdown" "Avante" "AvanteInput"];
     };
   };
 }
