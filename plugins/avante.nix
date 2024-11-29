@@ -8,6 +8,14 @@ _: {
         model = "claude-3-5-sonnet-20241022";
         temperature = 0;
       };
+      vendors = {
+        ollama = {
+          __inherited_from = "openai";
+          api_key_name = "";
+          endpoint = "http://127.0.0.1:11434/v1";
+          model = "codegemma";
+        };
+      };
       diff = {
         autojump = true;
         debug = false;
@@ -32,7 +40,7 @@ _: {
           theirs = "ct";
         };
       };
-      provider = "copilot";
+      provider = "ollama";
       windows = {
         sidebar_header = {
           align = "center";
