@@ -100,6 +100,7 @@
       pyright.enable = true;
       terraformls.enable = true;
       ts_ls.enable = true;
+      svelte.enable = true;
       yamlls.enable = true;
       rust_analyzer = {
         enable = true;

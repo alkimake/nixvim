@@ -12,6 +12,10 @@
       ensure_installed = [
         "hcl"
         "terraform"
+        "typescript"
+        "css"
+        "javascript"
+        "svelte"
       ];
 
       # Workaround to enable incremental selection without setting default keymaps (keymaps are set globally)
