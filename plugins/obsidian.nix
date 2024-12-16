@@ -14,8 +14,8 @@ _: {
         }
       ];
       daily_notes = {
-        template = "~/Documents/obsidian/templates/daily_note_template.md";
-        folder = "daily_notes";
+        template = "Extras/Templates/Daily Note.md";
+        folder = "YYYY/MM-MMMM/YYYY-MM-DD-dddd";
       };
       mappings = {
         gf = {
@@ -32,7 +32,7 @@ _: {
         };
       };
       templates = {
-        subdir = "~/obsidian/templates";
+        subdir = "Extras/Templates/";
         substitutions = {
           monday.__raw = ''
             function()
