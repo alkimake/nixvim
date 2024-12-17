@@ -8,7 +8,7 @@
 
         # Needed to keep terminal transparency, if any
         transparent_background = true;
-        dim_inactive.enabled = true;
+        dim_inactive.enabled = false;
       };
     };
   };
