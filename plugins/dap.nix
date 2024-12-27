@@ -8,6 +8,9 @@
           path = "${pkgs.delve}/bin/dlv";
         };
       };
+      "dap-python" = {
+        enable = true;
+      };
       "dap-ui" = {
         enable = true;
         expandLines = false;
