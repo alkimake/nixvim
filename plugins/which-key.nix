@@ -69,6 +69,11 @@
           group = "Test";
         }
         {
+          __unkeyed-1 = "<leader>x";
+          icon = "${icons.Trouble} ";
+          group = "Trouble";
+        }
+        {
           __unkeyed-1 = "<leader>u";
           icon = "${icons.Window} ";
           group = "UI/UX";
