@@ -1,4 +1,4 @@
-_: {
+{ pkgs, ... }: {
   opts = {
     enable = true;
     settings = {
@@ -51,4 +51,5 @@ _: {
       };
     };
   };
+  extra.packages = [ pkgs.vimPlugins.neotest-plenary];
 }
