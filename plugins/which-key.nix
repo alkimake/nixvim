@@ -59,9 +59,14 @@
           group = "Session";
         }
         {
-          __unkeyed-1 = "<leader>t";
+          __unkeyed-1 = "<leader>T";
           icon = "${icons.Terminal} ";
           group = "Terminal";
+        }
+        {
+          __unkeyed-1 = "<leader>t";
+          icon = "${icons.Test} ";
+          group = "Test";
         }
         {
           __unkeyed-1 = "<leader>u";

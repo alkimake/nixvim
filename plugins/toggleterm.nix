@@ -39,19 +39,19 @@ _: {
   rootOpts.keymaps = [
     {
       mode = "n";
-      key = "<Leader>tf";
+      key = "<Leader>Tf";
       action = "<Cmd>ToggleTerm direction=float<CR>";
       options.desc = "Open floating terminal";
     }
     {
       mode = "n";
-      key = "<Leader>th";
+      key = "<Leader>Th";
       action = "<Cmd>ToggleTerm size=10 direction=horizontal<CR>";
       options.desc = "Open terminal in horizontal split";
     }
     {
       mode = "n";
-      key = "<Leader>tv";
+      key = "<Leader>Tv";
       action = "<Cmd>ToggleTerm size=80 direction=vertical<CR>";
       options.desc = "Open terminal in vertical split";
     }
@@ -81,7 +81,7 @@ _: {
     }
     {
       mode = ["n" "t"];
-      key = "<Leader>tn";
+      key = "<Leader>Tn";
       action.__raw = ''
         function()
           local curterm = require("toggleterm.terminal").get_focused_id()
@@ -95,7 +95,7 @@ _: {
     }
     {
       mode = ["n" "t"];
-      key = "<Leader>tl";
+      key = "<Leader>Tl";
       action = "<cmd>TermSelect<cr>";
       options.desc = "List terminals";
     }

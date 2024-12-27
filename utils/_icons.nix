@@ -57,6 +57,7 @@
   Tab = "󰓩";
   TabClose = "󰅙";
   Terminal = "";
+  Test = "";
   Window = "";
   WordFile = "󰈭";
 }
