@@ -2,7 +2,7 @@
 # nixvim doc: https://nix-community.github.io/nixvim/plugins/neo-tree/index.html
 {icons, ...}: {
   opts = {
-    enable = true;
+    enable = false;
 
     # Automatically clean up broken neo-tree buffers saved in sessions
     autoCleanAfterSessionRestore = true;
