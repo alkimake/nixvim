@@ -19,9 +19,19 @@
       # Customize section names (prefixed mappings)
       spec = [
         {
+          __unkeyed-1 = "<leader>a";
+          icon = "${icons.AI}";
+          group = "AI (Avante)";
+        }
+        {
           __unkeyed-1 = "<leader>b";
           icon = "${icons.Tab} ";
           group = "Buffers";
+        }
+        {
+          __unkeyed-1 = "<leader>c";
+          icon = "${icons.Code} ";
+          group = "Code Actions";
         }
         {
           __unkeyed-1 = "<leader>bs";
