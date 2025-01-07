@@ -6,6 +6,9 @@
     enable = true;
     settings = {
       # Enable treesitter based indentation (use '=' to auto-indent)
+      highlight = {
+        enable = true;
+      };
       indent = {
         enable = true;
       };
