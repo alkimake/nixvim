@@ -156,6 +156,9 @@
       vim.keymap.set('v', '<D-v>', '"+P') -- Paste visual mode
       vim.keymap.set('c', '<D-v>', '<C-R>+') -- Paste command mode
       vim.keymap.set('i', '<D-v>', '<ESC>l"+Pli') -- Paste insert mode
+      vim.keymap.set({ "n", "v" }, "<C-+>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<CR>")
+      vim.keymap.set({ "n", "v" }, "<C-->", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1<CR>")
+      vim.keymap.set({ "n" , "v" }, "<C-0>", ":lua vim.g.neovide_scale_factor = 1<CR>")
     end
   '';
 }
