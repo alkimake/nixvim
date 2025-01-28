@@ -99,7 +99,10 @@
       nixd.enable = true;
       pyright.enable = true;
       terraformls.enable = true;
-      ts_ls.enable = true;
+      ts_ls = {
+        enable = true;
+        filetypes = ["typescript" "typescriptreact" "typescript.tsx" "svelte" "vue"];
+      };
       svelte.enable = true;
       yamlls.enable = true;
       rust_analyzer = {
