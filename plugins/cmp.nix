@@ -23,7 +23,8 @@ _: {
           name = "path"; # file system paths
           keywordLength = 3;
         }
-        {name = "copilot";}
+        # TODO: Add if copilot-cmp is enabled
+        # {name = "copilot";}
       ];
 
       window = {

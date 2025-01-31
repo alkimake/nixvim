@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   opts = {
-    enable = true;
+    enable = false;
     settings = {
       claude = {
         endpoint = "https://api.anthropic.com";

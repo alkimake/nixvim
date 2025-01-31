@@ -1,6 +1,6 @@
 _: {
   opts = {
-    enable = true;
+    enable = false;
     suggestion.enabled = false;
     panel.enabled = false;
     filetypes = {
