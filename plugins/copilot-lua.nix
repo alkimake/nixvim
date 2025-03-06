@@ -1,14 +1,16 @@
 _: {
   opts = {
     enable = false;
-    suggestion.enabled = false;
-    panel.enabled = false;
-    filetypes = {
-      "*" = true;
-      markdown = true;
-      help = false;
-      gitcommit = true;
-      gitrebase = true;
+    settings = {
+      suggestion.enabled = false;
+      panel.enabled = false;
+      filetypes = {
+        "*" = true;
+        markdown = true;
+        help = false;
+        gitcommit = true;
+        gitrebase = true;
+      };
     };
   };
 }
