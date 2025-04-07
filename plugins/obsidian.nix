@@ -1,6 +1,6 @@
 _: {
   opts = {
-    enable = true;
+    enable = false;
     settings = {
       completion = {
         min_chars = 2;
