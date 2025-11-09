@@ -86,7 +86,10 @@
 
     # Load all servers definitions
     servers = {
-      ansiblels.enable = true;
+      ansiblels = {
+        enable = true;
+        package = null;
+      };
       bashls.enable = true;
       docker_compose_language_service.enable = true;
       dockerls.enable = true;

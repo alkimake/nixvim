@@ -1,14 +1,13 @@
 _: {
   opts = {
     enable = true;
-    delay = 200;
-    filetypesDenylist = ["dirbuf" "dirvish" "fugitive" "toggleterm" "lazygit" "TelescopePrompt"];
-    largeFileOverrides.providers = ["lsp"];
-    minCountToHighlight = 2;
-
-    extraOptions = {
-      largeFileCutoff.__raw = "vim.tbl_get(require 'astrocore', 'config', 'features', 'large_buf', 'lines')";
-      should_enable.__raw = "function(bufnr) return require('astrocore.buffer').is_valid(bufnr) end";
+    settings = {
+      delay = 200;
+      filetypes_denylist = ["dirbuf" "dirvish" "fugitive" "toggleterm" "lazygit" "TelescopePrompt"];
+      large_file_overrides.providers = ["lsp"];
+      min_count_to_highlight = 2;
+      large_file_cutoff = 10000;
+      should_enable.__raw = "function(bufnr) return vim.api.nvim_buf_is_valid(bufnr) end";
     };
   };
 

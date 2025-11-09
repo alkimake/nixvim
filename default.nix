@@ -17,10 +17,6 @@ _:
 
     # Setup clipboard support
     clipboard = {
-      # TODO: Make this option as input can be set
-      # Use wl-copy as clipboard provider
-      providers.wl-copy.enable = true;
-
       # Sync system clipboard
       register = "unnamedplus";
     };
